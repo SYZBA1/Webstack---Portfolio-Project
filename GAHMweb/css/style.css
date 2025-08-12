@@ -1,0 +1,209 @@
+/* --- Fonts & Basic Setup --- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif; /* Default font */
+}
+
+.amharic {
+    font-family: 'Noto Sans Ethiopic', sans-serif;
+}
+
+/* Hide English text by default. JS will manage showing it. */
+/* IMPORTANT: This '.english { display: none; }' will hide your English content on page load.
+   You need separate JavaScript to toggle language visibility if you intend to switch.
+   For now, assuming this is intended behavior on initial load. */
+.english {
+    display: none;
+}
+
+
+/* --- Animations --- */
+
+/* For the hero gradient background */
+@keyframes animate-gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* For the on-load fade-in effect */
+.animate-on-load {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-load.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* For the sticky navigation slide-down effect */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+/* --- Page Sections & Major Components --- */
+
+/* This is the final, active style for your hero section */
+.hero-gradient {
+    background-image:  url('https://images.unsplash.com/photo-1476820865390-c52aeebb9891?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    /* The gradient animation below is now unused because of the background image,
+       but is kept here in case you want to switch back later. */
+    /* animation: animate-gradient 15s ease infinite; */
+}
+
+
+/* --- Navigation --- */
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* This is the final, active style for the nav link underline */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e9da0b; /* Yellow accent color */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Styles for the Sticky Navigation */
+/* NOTE: Your HTML header already uses 'fixed top-0 left-0 right-0 z-50'
+   So this '.sticky-nav' class might not be explicitly needed on the header
+   unless you're adding it conditionally via JS. If your header is always fixed,
+   these styles apply directly to the header element via Tailwind classes.
+   Keeping it here for completeness if you decide to use it. */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    background: linear-gradient(135deg, #5e3b98, #2c6aa8); /* Gradient background */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    animation: slideDown 0.5s ease-out;
+}
+
+
+/* --- Buttons & Cards --- */
+
+/* This is the final, active style for the donate button */
+.donate-btn {
+    background: linear-gradient(135deg, #e65c00 0%, #f9d423 100%);
+    transition: all 0.3s ease;
+}
+
+.donate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 92, 0, 0.4);
+}
+
+.sermon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Map Container Styling */
+#map {
+    height: 400px; /* Adjust height as needed */
+    width: 100%;
+    border-radius: 0.75rem; /* rounded-lg from Tailwind */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg from Tailwind */
+    border: 1px solid #E5E7EB; /* border border-gray-200 from Tailwind */
+}
+
+/* Ensure images in header logo are responsive */
+.header-logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Basic responsive adjustments for overall layout if needed beyond Tailwind */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Language specific classes - ensure they are hidden/shown correctly */
+/* This is a duplicate and should be removed if the first one is active. */
+/* Keeping it here to note the redundancy. */
+/* .english {
+    display: none;
+} */
+
+
+/* --- Gallery Slider Specific Styles --- */
+/* Add these styles to make your slider functional */
+
+.slider-container {
+    position: relative; /* Crucial for positioning absolute children (buttons) */
+    overflow: hidden; /* **THIS IS CRITICAL** - Hides the images outside the current view */
+}
+
+.slider-track {
+    display: flex; /* **THIS IS CRITICAL** - Lays out slider items horizontally */
+    transition: transform 0.5s ease-in-out; /* **THIS IS CRITICAL** - Smooth slide animation */
+    width: fit-content; /* Allows the track to expand to hold all images */
+    /* Alternatively, you can calculate the width: width: calc(100% * number_of_slides); */
+    /* If you have 6 slides, you could set width: 600%; if each item is 100% */
+}
+
+.slider-item {
+    flex-shrink: 0; /* **THIS IS CRITICAL** - Prevents items from shrinking */
+    width: 100%; /* **THIS IS CRITICAL** - Each item takes 100% width of the container */
+}
+
+/* Styling for the Navigation Buttons */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 1rem;
+    border-radius: 9999px; /* Makes it circular */
+    cursor: pointer;
+    z-index: 10; /* Ensures buttons are on top of images */
+    border: none; /* Remove default button border */
+    outline: none; /* Remove outline on focus */
+    display: flex; /* For centering the icon inside */
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-button:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
+}
+
+.slider-button.prev {
+    left: 1rem; /* Position from left */
+}
+
+.slider-button.next {
+    right: 1rem; /* Position from right */
+}
