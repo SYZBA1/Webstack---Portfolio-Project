@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="am" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global 3M - Library & Study Resources</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to your combined CSS -->
+</head>
+<body data-theme="light">
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator" id="scroll-indicator"></div>
+
+    <!-- Header (with Navigation) -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Global 3M Home">
+                <img src="img/globallogo.png" alt="Global 3M Logo" class="logo-img">
+                <span class="logo-text" data-en="Global3M" data-am="Global3M">Global3M</span>
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="index.html#home" class="nav-link" role="menuitem" data-en="Home" data-am="ቤት">ቤት</a></li>
+                <li role="none"><a href="about.html" class="nav-link" role="menuitem" data-en="About" data-am="ስለ እኛ">ስለ እኛ</a></li>
+                <li role="none"><a href="sermons.html" class="nav-link" role="menuitem" data-en="Sermons" data-am="ስብከቶች">ስብከቶች</a></li>
+                <li role="none"><a href="donate.html" class="nav-link" role="menuitem" data-en="Donate" data-am="ለግስ">ለግስ</a></li>
+                <li role="none"><a href="articles.html" class="nav-link" role="menuitem" data-en="Articles" data-am="ጽሑፎች">ጽሑፎች</a></li>
+                <li role="none"><a href="library.html" class="nav-link active" role="menuitem" data-en="Library" data-am="መጻሕፍት">መጻሕፍት</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem" data-en="Contact" data-am="ያግኙን">ያግኙን</a></li>
+            </ul>
+
+            <div class="toggle-container">
+                <button class="toggle-btn" id="lang-toggle" aria-label="Toggle language">EN</button>
+                <button class="toggle-btn" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
+
+            <div class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Library Page Specific -->
+    <section class="hero-library" role="banner">
+        <div class="hero-content">
+            <h1 class="fade-in" data-en="Library & Study Resources" data-am="ቤተ-መጻሕፍት እና የጥናት ግብዓቶች">ቤተ-መጻሕፍት እና የጥናት ግብዓቶች</h1>
+            <p class="fade-in" style="animation-delay: 0.2s;" data-en="Equipping believers through biblical literature and ministry tools." data-am="በመጽሐፍ ቅዱሳዊ ጽሑፎች እና በአገልግሎት መሳሪያዎች አማኞች ማስታጠቅ።">በመጽሐፍ ቅዱሳዊ ጽሑፎች እና በአገልግሎት መሳሪያዎች አማኞች ማስታጠቅ።</p>
+            <p class="fade-in intro-text" style="animation-delay: 0.4s;" data-en="Explore handpicked materials supporting our mission of transformation." data-am="የለውጥ ተልእኮአችንን የሚደግፉ በጥንቃቄ የተመረጡ ቁሳቁሶችን ያስሱ።">Explore handpicked materials supporting our mission of transformation.</p>
+        </div>
+    </section>
+
+    <!-- Book Grid Section -->
+    <section class="library-section py-16" id="library-section">
+        <div class="container">
+            <h2 class="section-title fade-in" data-en="Our Resources" data-am="የእኛ ግብዓቶች">የእኛ ግብዓቶች</h2>
+            <p class="section-subtitle fade-in" style="animation-delay: 0.1s;" data-en="Browse our collection of faith-building books and study materials." data-am="እምነትን የሚገነቡ መጽሐፎቻችንን እና የጥናት ቁሳቁሶቻችንን ያስሱ።">Browse our collection of faith-building books and study materials።</p>
+            
+            <div class="book-grid" id="book-grid">
+                <!-- Book Card 1 -->
+                <div class="book-card fade-in" data-language="amharic" data-format="pdf" data-topic="discipleship" data-title-en="The Way of Life" data-title-am="የሕይወት መንገድ" data-author-en="Pastor Dawit A." data-author-am="ፓስተር ዳዊት አ.">
+                    <img src='../img/book1.png' data-src='../img/book1.png' alt="Book Cover" class="book-thumbnail lazy-image">
+                    <div class="book-content">
+                        <h3 class="book-title" data-en="Rethinking Global Mobilization:" data-am="የሕይወት መንገድ">የሕይወት መንገድ</h3>
+                        <p class="book-author" data-en="Author: RAYAN SHAW" data-am="ጸሐፊ: ራያን ሻው">ጸሐፊ: ራያን ሻው</p>
+                        <p class="book-description" data-en="Calling the Church to Her Core Identity." data-am="ቤተክርስቲያንን ወደ ዋና ማንነቷ መጥራት።">ቤተክርስቲያንን ወደ ዋና ማንነቷ መጥራት።</p>
+                        <span class="book-format-badge" data-en="PDF" data-am="ፒዲኤፍ">PDF</span>
+                        <button class="book-details-btn" data-action="download" data-link="https://amzn.to/3t89k8s" data-en="Download PDF" data-am="ፒዲኤፍ ያውርዱ">Download PDF</button>
+                    </div>
+                </div>
+
+                <!-- Book Card 2 -->
+                <div class="book-card fade-in" data-language="english" data-format="print" data-topic="evangelism" data-title-en="Reaching the Unreached" data-title-am="ያልደረሱትን መድረስ" data-author-en="Dr. Samuel B." data-author-am="ዶ/ር ሳሙኤል ቢ.">
+                    <img src='../img/book2.jpg' data-src='../img/book2.jpg' alt="Book Cover" class="book-thumbnail lazy-image">
+                    <div class="book-content">
+                        <h3 class="book-title" data-en="Mission Mobilization Movements Facilitation Manual" data-am="የተልእኮ ማነቃቂያ እንቅስቃሴዎች አመቻች መመሪያ">የተልእኮ ማነቃቂያ እንቅስቃሴዎች አመቻች መመሪያ</h3>
+                        <p class="book-author" data-en="Author: RAYAN SHAW" data-am="ጸሐፊ: ራያን ሻው">ጸሐፊ: ራያን ሻው</p>
+                        <p class="book-description" data-en="Strategies and insights for effective evangelism in diverse cultures." data-am="በተለያዩ ባህሎች ውስጥ ውጤታማ ወንጌል ለመስበክ ስልቶች እና ግንዛቤዎች።">በተለያዩ ባህሎች ውስጥ ውጤታማ ወንጌል ለመስበክ ስልቶች እና ግንዛቤዎች።</p>
+                        <span class="book-format-badge" data-en="PDF" data-am="ፒዲኤፍ">PDF</span>
+                        <button class="book-details-btn" data-action="download" data-link="https://www.globalmmi.net/product/mission-mobilization-movements-facilitation-manual" data-en="Download PDF" data-am="ፒዲኤፍ ያውርዱ">Download PDF</button>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Request a Copy CTA Section -->
+    <section class="request-copy-cta py-16" id="request-copy-cta">
+        <div class="container text-center">
+            <h2 class="section-title fade-in" data-en="Want More Resources?" data-am="ተጨማሪ ግብዓቶች ይፈልጋሉ?">ተጨማሪ ግብዓቶች ይፈልጋሉ?</h2>
+            <p class="section-subtitle fade-in" style="animation-delay: 0.1s;" data-en="If you can't find what you're looking for or need a physical copy, please reach out to us." data-am="የሚፈልጉትን ማግኘት ካልቻሉ ወይም አካላዊ ቅጂ ከፈለጉ፣ እባክዎ ያግኙን።">የሚፈልጉትን ማግኘት ካልቻሉ ወይም አካላዊ ቅጂ ከፈለጉ፣ እባክዎ ያግኙን።</p>
+            <a href="contact.html" class="cta-button fade-in" style="animation-delay: 0.2s;" data-en="Request a Copy" data-am="ቅጂ ይጠይቁ">ቅጂ ይጠይቁ</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer py-12" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="footer-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Organization Info -->
+                <div class="footer-section">
+                    <div class="footer-logo mb-6">
+                        <h3 class="text-3xl font-bold mb-2">Global3M</h3>
+                        <p class="text-sm" data-en="Spreading God's love worldwide through missions, ministry, and media. Join us in transforming communities and building bridges of faith across cultures and nations." data-am="በተልእኮ፣ በአገልግሎት እና በመገናኛ ብዙሃን የእግዚአብሔርን ፍቅር በዓለም ዙሪያ ማስፋፋት። ማህበረሰቦችን በመቀየር እና በባህሎች እና ብሄሮች መካከል የእምነት ድልድዮችን በመገንባት ይቀላቀሉን።">በተልእኮ፣ በአገልግሎት እና በመገናኛ ብዙሃን የእግዚአብሔርን ፍቅር በዓለም ዙሪያ ማስፋፋት። ማህበረሰቦችን በመቀየር እና በባህሎች እና ብሄሮች መካከል የእምነት ድልድዮችን በመገንባት ይቀላቀሉን።</p>
+                    </div>
+                    <div class="contact-info space-y-2 text-sm">
+                        <p class="flex items-center"><span class="contact-icon mr-2">📧</span> info@global3m.org</p>
+                        <p class="flex items-center"><span class="contact-icon mr-2">🌐</span> www.global3m.org</p>
+                        <p class="flex items-center"><span class="contact-icon mr-2">📍</span> <span data-en="Serving globally from Ethiopia" data-am="ከኢትዮጵያ ዓለም አቀፍ አገልግሎት">ከኢትዮጵያ ዓለም አቀፍ አገልግሎት</span></p>
+                        <p class="flex items-center"><span class="contact-icon mr-2">📞</span> +251 973 437 777</p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4 class="text-xl font-semibold mb-4" data-en="Quick Links" data-am="ፈጣን አገናኞች">ፈጣን አገናኞች</h4>
+                    <ul class="footer-links space-y-2">
+                        <li><a href="about.html" class="hover:text-primary-color transition-colors" data-en="About Us" data-am="ስለ እኛ">ስለ እኛ</a></li>
+                        <li><a href="sermons.html" class="hover:text-primary-color transition-colors" data-en="Sermons" data-am="ስብከቶች">ስብከቶች</a></li>
+                        <li><a href="articles.html" class="hover:text-primary-color transition-colors" data-en="Articles" data-am="ጽሑፎች">ጽሑፎች</a></li>
+                        <li><a href="library.html" class="hover:text-primary-color transition-colors" data-en="Library" data-am="መጻሕፍት">መጻሕፍት</a></li>
+                        <li><a href="donate.html" class="hover:text-primary-color transition-colors" data-en="Donate" data-am="ለግስ">ለግስ</a></li>
+                        <li><a href="contact.html" class="hover:text-primary-color transition-colors" data-en="Contact" data-am="ያግኙን">ያግኙን</a></li>
+                    </ul>
+                </div>
+
+                
+                <!-- Newsletter & Social Media -->
+                <div class="footer-section">
+                    <!-- Newsletter Signup -->
+                    <div class="newsletter-signup mb-4">
+                        <h4 class="text-xl font-semibold mb-2" data-en="Stay Updated" data-am="ወቅታዊ ይሁኑ">ወቅታዊ ይሁኑ</h4>
+                        <form class="newsletter-form flex" aria-label="Newsletter signup">
+                            <input type="email" placeholder="your@email.com" required aria-label="Email address" class="flex-grow p-2 rounded-l-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-color">
+                            <button type="submit" class="px-4 py-2 rounded-r-lg font-semibold transition-colors" data-en="Subscribe" data-am="ይመዝገቡ">ይመዝገቡ</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Social Media Icons (Reversed Order) -->
+                    <div class="social-section">
+                        <h4 class="text-xl font-semibold mb-4" data-en="Follow Us" data-am="ይከተሉን">ይከተሉን</h4>
+                        <div class="social-icons flex space-x-4 justify-center md:justify-start">
+                           <!-- telegram -->
+                            <a href="https://t.me/global3m" target="_blank" rel="noopener noreferrer" class="social-icon telegram p-2 rounded-full hover:bg-primary-color" aria-label="Telegram Channel">
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 0C5.372 0 0 5.373 0 12c0 6.626 5.372 12 12 12s12-5.374 12-12c0-6.627-5.372-12-12-12zm5.458 7.653-1.73 8.163c-.131.588-.47.732-.953.456l-2.63-1.94-1.267 1.22c-.14.14-.256.257-.523.257l.188-2.673 4.868-4.4c.212-.188-.046-.293-.328-.105l-6.01 3.786-2.585-.81c-.562-.174-.573-.562.118-.832l10.078-3.887c.47-.174.88.105.728.827z"/>
+                                </svg>
+                            </a>
+
+                            <!-- Facebook -->
+                            <a href="https://web.facebook.com/profile.php?id=61579091634841" target="_blank" rel="noopener noreferrer" class="social-icon facebook p-2 rounded-full hover:bg-primary-color" aria-label="Facebook Page">
+                                <svg viewBox="0 0 24 24" width="28" height="28">
+                                    <path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            
+                            <!-- YouTube -->
+                            <a href="https://youtube.com/@global3m" target="_blank" rel="noopener noreferrer" class="social-icon youtube p-2 rounded-full hover:bg-primary-color" aria-label="YouTube Channel">
+                                <svg viewBox="0 0 24 24" width="28" height="28">
+                                    <path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom border-t border-gray-700 pt-6 mt-8 text-sm text-center">
+                <div class="footer-bottom-content flex flex-col md:flex-row justify-between items-center">
+                    <p class="mb-2 md:mb-0">&copy; 2025 Global3M Ministry. <span data-en="All rights reserved." data-am="ሁሉም መብቶች የተጠበቁ ናቸው።">ሁሉም መብቶች የተጠበቁ ናቸው።</span></p>
+                    <div class="footer-bottom-links space-x-4">
+                        <a href="#privacy" class="hover:text-primary-color transition-colors" data-en="Privacy Policy" data-am="የግላዊነት ፖሊሲ">የግላዊነት ፖሊሲ</a>
+                        <span>|</span>
+                        <a href="#terms" class="hover:text-primary-color transition-colors" data-en="Terms of Service" data-am="የአገልግሎት ውል">የአገልግሎት ውል</a>
+                        <span>|</span>
+                        <a href="https://maps.app.goo.gl/sPJZhAfiB6tEqT8v5" class="hover:text-primary-color transition-colors" data-en="Sitemap" data-am="የጣቢያ ካርታ">የጣቢያ ካርታ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">⬆</button>
+    <script src="js/main.js" defer></script> <!-- Your main JS -->
+</body>
+</html>
